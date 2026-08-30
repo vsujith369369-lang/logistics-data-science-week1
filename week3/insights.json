@@ -1,0 +1,191 @@
+{
+  "kpi": {
+    "shipments": 60000,
+    "otd_pct": 67.7,
+    "otd_gap_pp": 22.3,
+    "avg_cost_inr": 441.53
+  },
+  "lanes": {
+    "late_shipments": 19383,
+    "lanes_total": 30,
+    "top_n": 12,
+    "share_of_failures_pct": 61.6,
+    "worst_lanes": [
+      {
+        "hub": "Delhi",
+        "carrier": "LocalFleet",
+        "late": 1350
+      },
+      {
+        "hub": "Delhi",
+        "carrier": "Ecom",
+        "late": 1307
+      },
+      {
+        "hub": "Delhi",
+        "carrier": "XpressBees",
+        "late": 1247
+      },
+      {
+        "hub": "Mumbai",
+        "carrier": "LocalFleet",
+        "late": 1214
+      },
+      {
+        "hub": "Delhi",
+        "carrier": "Delhivery",
+        "late": 1074
+      },
+      {
+        "hub": "Mumbai",
+        "carrier": "XpressBees",
+        "late": 1020
+      },
+      {
+        "hub": "Mumbai",
+        "carrier": "Ecom",
+        "late": 995
+      },
+      {
+        "hub": "Kolkata",
+        "carrier": "Ecom",
+        "late": 782
+      },
+      {
+        "hub": "Kolkata",
+        "carrier": "XpressBees",
+        "late": 779
+      },
+      {
+        "hub": "Kolkata",
+        "carrier": "LocalFleet",
+        "late": 767
+      },
+      {
+        "hub": "Mumbai",
+        "carrier": "Delhivery",
+        "late": 707
+      },
+      {
+        "hub": "Kolkata",
+        "carrier": "Delhivery",
+        "late": 693
+      }
+    ]
+  },
+  "carrier": {
+    "best": {
+      "carrier": "BlueDart",
+      "otd_pct": 85.8,
+      "cost_per_km": 1.17
+    },
+    "worst": {
+      "carrier": "LocalFleet",
+      "otd_pct": 35.93,
+      "cost_per_km": 0.84
+    },
+    "otd_spread_pp": 49.9,
+    "cost_premium_per_km": 0.33
+  },
+  "service_design": [
+    {
+      "service_level": "Same-Day",
+      "promised_hours": 12.0,
+      "mean_transit_hours": 20.45,
+      "otd_pct": 28.23,
+      "verdict": "structurally undeliverable as specified"
+    },
+    {
+      "service_level": "Express",
+      "promised_hours": 36.0,
+      "mean_transit_hours": 36.46,
+      "otd_pct": 59.93,
+      "verdict": "structurally undeliverable as specified"
+    }
+  ],
+  "season": {
+    "best_month": "2025-01-01",
+    "best_otd_pct": 76.06,
+    "worst_month": "2024-11-01",
+    "worst_otd_pct": 44.25,
+    "otd_swing_pp": 31.8,
+    "volume_swing_pct": 18.0,
+    "peak_cost_surcharge_pct": 13.1
+  },
+  "unreliability_cost": {
+    "excess_return_rate_pp": 5.71,
+    "avoidable_returns": 1107,
+    "direct_cost_inr_lakh": 4.21,
+    "csat_penalty": 1.44
+  },
+  "scale": {
+    "cpk_shortest_decile": 2.04,
+    "cpk_longest_decile": 0.54,
+    "unit_cost_reduction_pct": 73.6,
+    "cost_per_kg_spread_pct": 4.2,
+    "fill_rate_pct": 71.43,
+    "fill_gap_pp": 10.6
+  },
+  "recommendations": [
+    {
+      "action": "Re-route the top 12 failing hub-carrier lanes to the three best-performing carriers",
+      "evidence": "61.6% of 19383 late shipments",
+      "impact": 9,
+      "confidence": 9,
+      "effort": 3,
+      "horizon": "30 days",
+      "score": 27.0,
+      "rank": 1
+    },
+    {
+      "action": "Re-specify Same-Day as a distance-capped 18-hour product",
+      "evidence": "mean transit exceeds the contractual SLA",
+      "impact": 8,
+      "confidence": 9,
+      "effort": 4,
+      "horizon": "45 days",
+      "score": 18.0,
+      "rank": 2
+    },
+    {
+      "action": "Performance-linked carrier scorecards with volume reallocation",
+      "evidence": "49.9 pp spread between best and worst carrier",
+      "impact": 6,
+      "confidence": 8,
+      "effort": 4,
+      "horizon": "ongoing",
+      "score": 12.0,
+      "rank": 3
+    },
+    {
+      "action": "Pre-book Oct-Nov peak capacity at fixed rates in Q2",
+      "evidence": "31.8 pp seasonal OTD swing on 18.0% volume swing",
+      "impact": 8,
+      "confidence": 7,
+      "effort": 5,
+      "horizon": "1 quarter",
+      "score": 11.2,
+      "rank": 4
+    },
+    {
+      "action": "Delhi hub capacity programme (sortation shift + dispatch windows)",
+      "evidence": "largest absolute failure pool of any origin hub",
+      "impact": 7,
+      "confidence": 7,
+      "effort": 6,
+      "horizon": "1 quarter",
+      "score": 8.17,
+      "rank": 5
+    },
+    {
+      "action": "Multi-drop consolidation of sub-350 km loads plus load-level costing",
+      "evidence": "unit cost falls 73.6% across haul deciles while fill-rate bands differ by only 4.2%",
+      "impact": 6,
+      "confidence": 6,
+      "effort": 6,
+      "horizon": "60 days",
+      "score": 6.0,
+      "rank": 6
+    }
+  ]
+}
