@@ -61,3 +61,25 @@ OpenStreetMap / OSRM · CVRPLIB & Solomon VRPTW benchmarks · Open-Meteo histori
 pip install -r requirements.txt
 python src/pipeline.py
 ```
+
+## Prenomal website starter
+
+A static, responsive starter website has been added under:
+
+- `/home/runner/work/logistics-data-science-week1/logistics-data-science-week1/website`
+
+It includes:
+- Home, About, Services, Gallery, Contact, and Privacy sections
+- Mobile navigation behavior
+- Client-side contact form validation
+- A GitHub Pages deployment workflow at `/home/runner/work/logistics-data-science-week1/logistics-data-science-week1/.github/workflows/deploy-website.yml`
+
+### Local preview
+
+Open `website/index.html` directly in a browser, or serve the repository with a static server.
+
+### GitHub Pages deployment
+
+1. In repository settings, set **Pages** source to **GitHub Actions**.
+2. Push changes to `main` that touch `website/**` (or run the workflow manually).
+3. The `Deploy Prenomal Website` workflow publishes the `website/` directory.

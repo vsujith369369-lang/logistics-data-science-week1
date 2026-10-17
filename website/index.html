@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Prenomal website starter with services, gallery, and contact details."
+    />
+    <title>Prenomal | Official Website</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-wrap">
+        <a class="brand" href="#top" aria-label="Prenomal home">Prenomal</a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a href="#privacy">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-content">
+          <p class="eyebrow">Welcome to Prenomal</p>
+          <h1>Build trust with a clean, modern online presence.</h1>
+          <p>
+            This starter site defines Prenomal's purpose, target audience, core pages,
+            and key features so you can quickly replace placeholders with real content.
+          </p>
+          <div class="cta-row">
+            <a class="button" href="#contact">Get in touch</a>
+            <a class="button button-secondary" href="#services">View services</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container split">
+          <div>
+            <h2>Project scope</h2>
+            <p>
+              <strong>Purpose:</strong> Present Prenomal professionally and convert visitors
+              into customer enquiries.
+            </p>
+            <p>
+              <strong>Target users:</strong> New customers, returning clients, and partners
+              looking for business credibility and quick contact options.
+            </p>
+          </div>
+          <div>
+            <h3>Brand starter</h3>
+            <ul>
+              <li><strong>Voice:</strong> Friendly, reliable, clear.</li>
+              <li><strong>Tone:</strong> Professional with simple language.</li>
+              <li><strong>Palette:</strong> Indigo, teal, and white for readability.</li>
+              <li><strong>Call to action:</strong> Book a consultation or request a quote.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="services">
+        <div class="container">
+          <h2>Services</h2>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Service 1</h3>
+              <p>Describe your first core offering and the value customers get.</p>
+            </article>
+            <article class="card">
+              <h3>Service 2</h3>
+              <p>Describe your second offering, timelines, and ideal use case.</p>
+            </article>
+            <article class="card">
+              <h3>Service 3</h3>
+              <p>Describe your third offering and how clients can get started.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="container">
+          <h2>Portfolio / Gallery</h2>
+          <p>Use these placeholders for project shots, products, or event highlights.</p>
+          <div class="gallery-grid" aria-label="Gallery placeholders">
+            <div class="tile">Image 1</div>
+            <div class="tile">Image 2</div>
+            <div class="tile">Image 3</div>
+            <div class="tile">Image 4</div>
+            <div class="tile">Image 5</div>
+            <div class="tile">Image 6</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="contact">
+        <div class="container split">
+          <div>
+            <h2>Contact</h2>
+            <p>Share your preferred channels and expected response time.</p>
+            <ul>
+              <li>Email: hello@prenomal.com</li>
+              <li>Phone: +00 0000 0000</li>
+              <li>Hours: Mon-Fri, 9:00-18:00</li>
+            </ul>
+          </div>
+          <form id="contact-form" class="contact-form" novalidate>
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="button">Send message</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section" id="privacy">
+        <div class="container">
+          <h2>Privacy notice</h2>
+          <p>
+            This demo form does not send data to a backend. Add your server endpoint or
+            third-party form service before using in production.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Prenomal. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
